@@ -1,0 +1,48 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+#container{
+    margin: 0 auto;
+    text-align: left;
+    padding: 2vw;
+    background-color: rgba(127, 255, 212, 0.39);
+    height: 100%;
+}
+
+#first{
+    display: inline-block;
+    border: solid black 1ch;
+    padding: 10vw;
+}
+#second{
+    display: inline-block;
+    border: solid gold 1ch;
+    padding: 10vw;
+    background-image: url("https://s3.envato.com/files/240797893/IMG_1225.jpg");
+    background-size: 100%;
+    background-position: cover;
+    background-repeat: no-repeat;
+
+}
+/* responsive text is annoying */
+#second a{
+    text-decoration: none;
+    text-emphasis-color: green;
+    color: blue;
+    position: relative;
+    top:4vw;
+}
+
+
+#test{
+    color: red;
+}
+
+#grow{
+    font-size: 5vw;
+    color: blue;
+}
