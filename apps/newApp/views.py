@@ -19,7 +19,7 @@ def addItem(request):
 def dbAddItem(request):
     print 'omg'
     print request.POST
-    x = Item.objects.create(name = request.POST['name'], description = request.POST['description'], color = request.POST['color'], img = request.POST['img'])
+    x = Item.objects.create(name = request.POST['name'], description = request.POST['description'], color = request.POST['color'], img = request.POST['img'], review = request.POST['review'])
     print x
     return redirect('/display')
 

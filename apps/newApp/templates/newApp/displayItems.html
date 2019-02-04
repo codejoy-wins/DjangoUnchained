@@ -13,16 +13,20 @@
     <div id="container">
         <h2>Item DB Display</h2>
         <p>display items here with templating logic and context parameters</p>
-        <p>jay : {{jay}}  </p>
+        <p><a href="/">Home | <a href="/addItem">Add more Items</a></p>
         <div id="db">
             <ul>
-                {% for item in items %}
+                {% for item in items|dictsortreversed:"id" %}
+
                     <li style="color:{{item.color}}">{{item.name}}</li>
                     <p><a href="/delete/{{item.id}}">Delete Item #{{item.id}}</a></p>
                     <p>{{item.description}}</p>
                     <p>{{item.color}}</p>
                     <div style="background-image: url({{item.img}}); background-size: cover; background-size: contain; background-repeat: no-repeat;" id="pic">
                             <p id="inside">{{item.description}}</p>
+                    </div>
+                    <div id="review">
+                        {{item.review}}
                     </div>
                 {% endfor %}
             </ul>
