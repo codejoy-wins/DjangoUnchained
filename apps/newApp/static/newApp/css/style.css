@@ -11,6 +11,7 @@ body{
     padding: 2vw;
     background-color: rgba(127, 255, 212, 0.39);
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 #first{
@@ -45,4 +46,18 @@ body{
 #grow{
     font-size: 5vw;
     color: blue;
+}
+#db{
+    height: 80%;
+    overflow: auto;
+}
+#pic{
+    height: 70vw;
+    width: 100%;
+}
+
+#inside{
+    background-color: rgba(245, 245, 245, 0.342);
+    text-align: center;
+    padding: 2vw;
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display</title>
+    <link rel="stylesheet" href="../../static/newApp/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<body>
+    <div id="container">
+        <h2>Item DB Display</h2>
+        <p>display items here with templating logic and context parameters</p>
+        <p>jay : {{jay}}  </p>
+        <div id="db">
+            <ul>
+                {% for item in items %}
+                    <li style="color:{{item.color}}">{{item.name}}</li>
+                    <p><a href="/delete/{{item.id}}">Delete Item #{{item.id}}</a></p>
+                    <p>{{item.description}}</p>
+                    <p>{{item.color}}</p>
+                    <div style="background-image: url({{item.img}}); background-size: cover; background-size: contain; background-repeat: no-repeat;" id="pic">
+                            <p id="inside">{{item.description}}</p>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="/addItem">Add more Items</a>        
+        <a href="/">Return Home</a>
+    </div>
+</body>
+</html>

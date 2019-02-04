@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/newApp/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<body>
+    <div id="container">
+        <h1>Add Item to Database Form</h1>
+        <form action="/dbAddItem" method="POST">
+            {% csrf_token %}
+            <p>Name: <input type="text" name="name"></p>
+            <p>Description: <input type="text" name="description"></p>
+            <p>Color: <input type="text" name="color"></p>
+            <p>Find an image online and right click to copy image address</p>
+            <p>Image: <input type="text" name="img"></p>
+
+            <p><input type="submit" value="obey"></p>
+        </form>
+        <div id="third">
+            <a href="/addItem">Add more Items</a>
+            <a href="/">Go home</a>
+        </div>
+    </div>
+    
+</body>
+</html>
