@@ -63,8 +63,8 @@ body{
 }
 
 #review{
-    color: green;
-
+    background-color: rgba(0, 0, 0, 0.514);
+    padding: 2vw;
 }
 a{
     text-decoration: none;
